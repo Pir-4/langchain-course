@@ -1,0 +1,3 @@
+PROVIDER=ollama
+MODEL=qwen3:8b
+API_KEY=
