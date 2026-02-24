@@ -10,5 +10,6 @@ dependencies = [
     "langchain-community>=0.4.1",
     "langchain-core>=1.2.13",
     "langchain-ollama>=1.0.1",
+    "langsmith>=0.7.4",
     "pydantic>=2.12.5",
 ]
