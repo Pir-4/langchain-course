@@ -6,15 +6,18 @@ def chat_factory(
         provider=PROVIDER,
         model=MODEL,
         api_key=API_KEY,
-        temperature:float = 0
+        temperature:float = 0,
+        streaming=False,
 ):
     if provider =='ollama':
         return ChatOllama(
             model=model,
             temperature=temperature,
+            streaming=streaming,
         )
     raise ValueError(f'Not support provider {provider}')
 
 llm = chat_factory()
 creative_llm = chat_factory(temperature=0.9)
 embedding_llm = OllamaEmbeddings(model=EMBED_MODEL)
+llm_streaming = chat_factory(streaming=True)
