@@ -1,5 +1,5 @@
-from langchain_ollama import ChatOllama
-from config import PROVIDER, MODEL, API_KEY
+from langchain_ollama import ChatOllama, OllamaEmbeddings
+from config import PROVIDER, MODEL, API_KEY, EMBED_MODEL
 
 
 def chat_factory(
@@ -17,3 +17,4 @@ def chat_factory(
 
 llm = chat_factory()
 creative_llm = chat_factory(temperature=0.9)
+embedding_llm = OllamaEmbeddings(model=EMBED_MODEL)

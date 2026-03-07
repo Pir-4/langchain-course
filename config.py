@@ -5,6 +5,7 @@ load_dotenv()
 
 PROVIDER = os.environ.get("PROVIDER")
 MODEL = os.environ.get("MODEL")
+EMBED_MODEL = os.environ.get("EMBED_MODEL")
 API_KEY = os.environ.get("API_KEY")
 LANGSMITH_API_KEY = os.environ.get("LANGSMITH_API_KEY")
 
